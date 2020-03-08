@@ -1,9 +1,9 @@
 # code your #valid_move? method here
 def valid_move?(board, inp)
   empty = position_taken?(board, inp)
-  if inp == between?(0, 8) && empty == false
+  if inp.between?(0, 8) == true && empty == false
     return true
-  elsif inp != between?(0,8) || empty == true
+  elsif inp.between?(0,8) == false|| empty == true
     return false
   end
 end
